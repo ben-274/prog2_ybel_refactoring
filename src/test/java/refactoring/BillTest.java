@@ -21,7 +21,7 @@ public class BillTest {
 		Article article = new Article(bike, 1);
 
         assertTrue(bill.addArticle(article));
-        assertEquals(1, bill.articles.size());
+        assertEquals(1, bill.getArticles().size());
 	}
 	
 	@Test
