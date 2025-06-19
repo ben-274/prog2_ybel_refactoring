@@ -7,8 +7,8 @@ public class Mountainbike extends Bike {
     public int frontGearsCount;
 
     public Mountainbike(String pn, double p, int ms, int rgc, int fgc) {
-        productName = pn;
-        price = p;
+        setProductName(pn);
+        setPrice(p);
         maxSpeed = ms;
         rearGearsCount = rgc;
         frontGearsCount = fgc;

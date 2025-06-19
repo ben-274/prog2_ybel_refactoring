@@ -44,16 +44,16 @@ public class Bill {
             double price = 0;
             if (article.getBike() instanceof Brompton) {
                 if (article.getPurchaseAmount() > 1) {
-                    price += (article.getPurchaseAmount() - 1) * article.getBike().price / 2;
+                    price += (article.getPurchaseAmount() - 1) * article.getBike().getPrice() / 2;
                 }
-                price += article.getBike().price * article.getPurchaseAmount();
+                price += article.getBike().getPrice() * article.getPurchaseAmount();
             } else if (article.getBike() instanceof EBike) {
-                price += article.getBike().price * article.getPurchaseAmount();
+                price += article.getBike().getPrice() * article.getPurchaseAmount();
             } else if (article.getBike() instanceof Mountainbike) {
                 if (article.getPurchaseAmount() > 2) {
-                    price += article.getPurchaseAmount() * article.getBike().price * 9 / 10;
+                    price += article.getPurchaseAmount() * article.getBike().getPrice() * 9 / 10;
                 } else {
-                    price += article.getBike().price * article.getPurchaseAmount();
+                    price += article.getBike().getPrice() * article.getPurchaseAmount();
                 }
             }
             if (price > 1000f || price == 1000.0) {
@@ -62,7 +62,7 @@ public class Bill {
 
             result +=
                     "\t"
-                            + article.getBike().productName
+                            + article.getBike().getProductName()
                             + "\tx\t"
                             + article.getPurchaseAmount()
                             + "\t=\t"
