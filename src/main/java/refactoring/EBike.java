@@ -2,16 +2,16 @@ package refactoring;
 
 public class EBike extends Bike {
 
-    public int maxSpeed;
-    public int rearGearsCount;
-    public int frontGearsCount;
+    private int maxSpeed;
+    private int rearGearsCount;
+    private int frontGearsCount;
 
     public EBike(String pn, double p, int ms, int rgc, int fgc, int bc) {
         setProductName(pn);
         setPrice(p);
-        maxSpeed = ms;
-        rearGearsCount = rgc;
-        frontGearsCount = fgc;
+        setMaxSpeed(ms);
+        setRearGearsCount(rgc);
+        setFrontGearsCount(fgc);
         setBatteryCapacity(bc);
     }
 
@@ -21,6 +21,41 @@ public class EBike extends Bike {
 
     @Override
     public int getGearsCount() {
-        return rearGearsCount * frontGearsCount;
+        return getRearGearsCount() * getFrontGearsCount();
     }
+
+	/**
+	 * @return the frontGearsCount
+	 */
+	public int getFrontGearsCount() {
+		return frontGearsCount;
+	}
+
+	/**
+	 * @param frontGearsCount the frontGearsCount to set
+	 */
+	public void setFrontGearsCount(int frontGearsCount) {
+		this.frontGearsCount = frontGearsCount;
+	}
+
+	/**
+	 * @return the rearGearsCount
+	 */
+	public int getRearGearsCount() {
+		return rearGearsCount;
+	}
+
+	/**
+	 * @param rearGearsCount the rearGearsCount to set
+	 */
+	public void setRearGearsCount(int rearGearsCount) {
+		this.rearGearsCount = rearGearsCount;
+	}
+
+	/**
+	 * @param maxSpeed the maxSpeed to set
+	 */
+	public void setMaxSpeed(int maxSpeed) {
+		this.maxSpeed = maxSpeed;
+	}
 }
