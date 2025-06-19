@@ -6,6 +6,8 @@ public class Bike {
     private double price;
     public Integer batteryCapacity;
 	private int maxSpeed;
+	private int rearGearsCount;
+	private int frontGearsCount;
 
     public Integer getBatteryCapacity() {
         return batteryCapacity;
@@ -59,5 +61,33 @@ public class Bike {
 	 */
 	public void setMaxSpeed(int maxSpeed) {
 		this.maxSpeed = maxSpeed;
+	}
+
+	/**
+	 * @return the frontGearsCount
+	 */
+	public int getFrontGearsCount() {
+		return frontGearsCount;
+	}
+
+	/**
+	 * @param frontGearsCount the frontGearsCount to set
+	 */
+	public void setFrontGearsCount(int frontGearsCount) {
+		this.frontGearsCount = frontGearsCount;
+	}
+
+	/**
+	 * @return the rearGearsCount
+	 */
+	public int getRearGearsCount() {
+		return rearGearsCount;
+	}
+
+	/**
+	 * @param rearGearsCount the rearGearsCount to set
+	 */
+	public void setRearGearsCount(int rearGearsCount) {
+		this.rearGearsCount = rearGearsCount;
 	}
 }
