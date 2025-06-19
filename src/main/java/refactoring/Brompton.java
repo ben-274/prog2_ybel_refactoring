@@ -19,4 +19,14 @@ public class Brompton extends Bike {
     public int getGearsCount() {
         return getRearGearsCount() * getFrontGearsCount();
     }
+    
+    @Override
+    public double calculatePrice(Article article) {
+    	double price = 0;
+		if (article.getPurchaseAmount() > 1) {
+		    price += (article.getPurchaseAmount() - 1) * getPrice() / 2;
+		}
+		price += getPrice() * article.getPurchaseAmount();
+		return price;
+	}
 }

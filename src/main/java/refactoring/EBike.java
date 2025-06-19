@@ -15,4 +15,9 @@ public class EBike extends Bike {
     public int getGearsCount() {
         return getRearGearsCount() * getFrontGearsCount();
     }
+    
+    @Override
+    public double calculatePrice(Article article) {
+		return getPrice() * article.getPurchaseAmount();
+	}
 }

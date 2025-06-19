@@ -16,6 +16,10 @@ public class Bike {
     public int getGearsCount() {
         throw new UnsupportedOperationException("Not Implemented");
     }
+    
+    public double calculatePrice(Article article) {
+    	throw new UnsupportedOperationException("Not Implemented");
+	}
 
 	/**
 	 * @param batteryCapacity the batteryCapacity to set

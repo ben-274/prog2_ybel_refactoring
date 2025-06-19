@@ -19,5 +19,16 @@ public class Mountainbike extends Bike {
     public int getGearsCount() {
         return getRearGearsCount() * getFrontGearsCount();
     }
+    
+    @Override
+    public double calculatePrice(Article article) {
+    	double price = 0;
+    	if (article.getPurchaseAmount() > 2) {
+            price += article.getPurchaseAmount() * getPrice() * 9 / 10;
+        } else {
+            price += getPrice() * article.getPurchaseAmount();
+        }
+		return price;
+	}
 
 }
