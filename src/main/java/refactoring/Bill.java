@@ -15,15 +15,15 @@ public class Bill {
     private String city;
     private ArrayList<Article> articles;
 
-    public Bill(String cn, String n, String s, String sn, int pc, Date b, String e, String c) {
-        setCustomerName(cn);
-        setNickname(n);
-        setStreet(s);
-        setStreetNumber(sn);
-        setPostalCode(pc);
-        setBirthday(b);
-        setEmail(e);
-        setCity(c);
+    public Bill(String customerName, String nickname, String street, String streetNumber, int postalCode, Date birthday, String email, String city) {
+        setCustomerName(customerName);
+        setNickname(nickname);
+        setStreet(street);
+        setStreetNumber(streetNumber);
+        setPostalCode(postalCode);
+        setBirthday(birthday);
+        setEmail(email);
+        setCity(city);
         setArticles(new ArrayList<>());
     }
 
