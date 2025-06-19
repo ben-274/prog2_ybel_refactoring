@@ -32,15 +32,21 @@ public class Bill {
     }
 
     public String getDetails() {
-        double total = 0;
-
         String result = "Details for \"" + getCustomerName() + "\"\n";
         result += getStreet() + " " + getStreetNumber() + "\n";
         result += getPostalCode() + " " + getCity() + "\n";
         result += "Geburtstag: " + getBirthday() + "\n";
         result += "Email: " + getEmail() + "\n\n";
-        result += "refactoring.Article: \n";
-        for (Article article : getArticles()) {
+        result += printArticle();
+
+        return result;
+    }
+
+	private String printArticle() {
+		double total = 0;
+		String result = "refactoring.Article: \n";
+		
+		for (Article article : getArticles()) {
             double price = article.getBike().calculatePrice(article);
             if (price > 1000f || price == 1000.0) {
                 price = price * 0.8;
@@ -58,9 +64,8 @@ public class Bill {
         }
 
         result += "\nTotal price:\t" + String.valueOf(total) + "\n";
-
-        return result;
-    }
+		return result;
+	}
 
 	public ArrayList<Article> getArticles() {
 		return articles;
