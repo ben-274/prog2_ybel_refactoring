@@ -2,7 +2,6 @@ package refactoring;
 
 public class Mountainbike extends Bike {
 
-    private int maxSpeed;
     private int rearGearsCount;
     private int frontGearsCount;
 
@@ -12,10 +11,6 @@ public class Mountainbike extends Bike {
         setMaxSpeed(maxSpeed);
         setRearGearsCount(rearGearsCount);
         setFrontGearsCount(frontGearsCount);
-    }
-
-    public int getMaxSpeed() {
-        return maxSpeed;
     }
 
     @Override
@@ -56,10 +51,4 @@ public class Mountainbike extends Bike {
 		this.rearGearsCount = rearGearsCount;
 	}
 
-	/**
-	 * @param maxSpeed the maxSpeed to set
-	 */
-	public void setMaxSpeed(int maxSpeed) {
-		this.maxSpeed = maxSpeed;
-	}
 }
