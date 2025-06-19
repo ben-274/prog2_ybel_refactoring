@@ -5,9 +5,9 @@ public class Article {
     private Bike bike;
     private int purchaseAmount;
 
-    public Article(Bike b, int pa) {
-        setBike(b);
-        setPurchaseAmount(pa);
+    public Article(Bike bike, int purchaseAmount) {
+        setBike(bike);
+        setPurchaseAmount(purchaseAmount);
     }
 
 	/**
