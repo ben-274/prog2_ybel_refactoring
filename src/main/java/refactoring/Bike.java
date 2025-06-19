@@ -5,6 +5,7 @@ public class Bike {
     private String productName;
     private double price;
     public Integer batteryCapacity;
+	private int maxSpeed;
 
     public Integer getBatteryCapacity() {
         return batteryCapacity;
@@ -47,5 +48,16 @@ public class Bike {
 	 */
 	public void setProductName(String productName) {
 		this.productName = productName;
+	}
+	
+	public int getMaxSpeed() {
+        return maxSpeed;
+    }
+	
+	/**
+	 * @param maxSpeed the maxSpeed to set
+	 */
+	public void setMaxSpeed(int maxSpeed) {
+		this.maxSpeed = maxSpeed;
 	}
 }

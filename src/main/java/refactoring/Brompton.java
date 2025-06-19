@@ -2,7 +2,6 @@ package refactoring;
 
 public class Brompton extends Bike {
 
-    private int maxSpeed;
     private int rearGearsCount;
     private int frontGearsCount;
 
@@ -12,10 +11,6 @@ public class Brompton extends Bike {
         setMaxSpeed(maxSpeed);
         setRearGearsCount(rearGearsCount);
         setFrontGearsCount(frontGearsCount);
-    }
-
-    public int getMaxSpeed() {
-        return maxSpeed;
     }
 
     @Override
@@ -54,12 +49,5 @@ public class Brompton extends Bike {
 	 */
 	public void setRearGearsCount(int rearGearsCount) {
 		this.rearGearsCount = rearGearsCount;
-	}
-
-	/**
-	 * @param maxSpeed the maxSpeed to set
-	 */
-	public void setMaxSpeed(int maxSpeed) {
-		this.maxSpeed = maxSpeed;
 	}
 }
