@@ -6,13 +6,13 @@ public class EBike extends Bike {
     private int rearGearsCount;
     private int frontGearsCount;
 
-    public EBike(String pn, double p, int ms, int rgc, int fgc, int bc) {
-        setProductName(pn);
-        setPrice(p);
-        setMaxSpeed(ms);
-        setRearGearsCount(rgc);
-        setFrontGearsCount(fgc);
-        setBatteryCapacity(bc);
+    public EBike(String productName, double price, int maxSpeed, int rearGearsCount, int frontGearsCount, int batteryCapacity) {
+        setProductName(productName);
+        setPrice(price);
+        setMaxSpeed(maxSpeed);
+        setRearGearsCount(rearGearsCount);
+        setFrontGearsCount(frontGearsCount);
+        setBatteryCapacity(batteryCapacity);
     }
 
     public int getMaxSpeed() {
