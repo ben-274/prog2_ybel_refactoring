@@ -42,18 +42,18 @@ public class Bill {
         result += "refactoring.Article: \n";
         for (Article article : getArticles()) {
             double price = 0;
-            if (article.bike instanceof Brompton) {
-                if (article.purchaseAmount > 1) {
-                    price += (article.purchaseAmount - 1) * article.bike.price / 2;
+            if (article.getBike() instanceof Brompton) {
+                if (article.getPurchaseAmount() > 1) {
+                    price += (article.getPurchaseAmount() - 1) * article.getBike().price / 2;
                 }
-                price += article.bike.price * article.purchaseAmount;
-            } else if (article.bike instanceof EBike) {
-                price += article.bike.price * article.purchaseAmount;
-            } else if (article.bike instanceof Mountainbike) {
-                if (article.purchaseAmount > 2) {
-                    price += article.purchaseAmount * article.bike.price * 9 / 10;
+                price += article.getBike().price * article.getPurchaseAmount();
+            } else if (article.getBike() instanceof EBike) {
+                price += article.getBike().price * article.getPurchaseAmount();
+            } else if (article.getBike() instanceof Mountainbike) {
+                if (article.getPurchaseAmount() > 2) {
+                    price += article.getPurchaseAmount() * article.getBike().price * 9 / 10;
                 } else {
-                    price += article.bike.price * article.purchaseAmount;
+                    price += article.getBike().price * article.getPurchaseAmount();
                 }
             }
             if (price > 1000f || price == 1000.0) {
@@ -62,9 +62,9 @@ public class Bill {
 
             result +=
                     "\t"
-                            + article.bike.productName
+                            + article.getBike().productName
                             + "\tx\t"
-                            + article.purchaseAmount
+                            + article.getPurchaseAmount()
                             + "\t=\t"
                             + String.valueOf(price)
                             + "\n";
