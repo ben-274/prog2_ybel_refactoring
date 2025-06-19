@@ -6,12 +6,12 @@ public class Brompton extends Bike {
     private int rearGearsCount;
     private int frontGearsCount;
 
-    public Brompton(String pn, double p, int ms, int rgc, int fgc) {
-        setProductName(pn);
-        setPrice(p);
-        setMaxSpeed(ms);
-        setRearGearsCount(rgc);
-        setFrontGearsCount(fgc);
+    public Brompton(String productName, double price, int maxSpeed, int rearGearsCount, int frontGearsCount) {
+        setProductName(productName);
+        setPrice(price);
+        setMaxSpeed(maxSpeed);
+        setRearGearsCount(rearGearsCount);
+        setFrontGearsCount(frontGearsCount);
     }
 
     public int getMaxSpeed() {
